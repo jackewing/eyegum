@@ -6,21 +6,35 @@ document.addEventListener("DOMContentLoaded", function (e) {
   var people = document.querySelector(".people");
   var star1 = document.querySelector(".star1");
   var star2 = document.querySelector(".star2");
-  var star3 = document.querySelector(".star3");
+  // var star3 = document.querySelector(".star3");
   var star4 = document.querySelector(".star4");
+  var star5 = document.querySelector(".star5");
   var sun = document.querySelector(".sun");
   var tents = document.querySelector(".tents");
 
+  var edgeLeft = document.querySelector(".edge-left");
+  var edgeLeftDouble = document.querySelector(".edge-left-double");
+  var edgeRight = document.querySelector(".edge-right");
+  var edgeRightDouble = document.querySelector(".edge-right-double");
+
+  var background = document.querySelector(".background");
+
   function scrollHandler(params) {
-    console.log(window.pageYOffset / document.body.scrollHeight);
-    // star1.style.top = parseInt(star1.offsetTop) + window.scrollY * 1.2 + "px";
-    // star2.style.top = parseInt(star2.offsetTop) + window.scrollY * 0.7 + "px";
-    // star3.style.top = parseInt(star3.offsetTop) + window.scrollY * 1.3 + "px";
-    // star4.style.top = parseInt(star4.offsetTop) + window.scrollY * 0.6 + "px";
-    // window.requestAnimationFrame(scrollHandler);
+    var percentage =
+      window.pageYOffset / (edgeLeft.scrollHeight - window.innerHeight);
+    // star1.style.top = percentage * 400 + 120 + "px";
+    // star2.style.top = percentage * 400 + 80 + "px";
+    // star3.style.top = percentage * -100 + 800 + "px";
+    // star4.style.top = percentage * 400 + 500 + "px";
+    // star5.style.top = percentage * 400 + 400 + "px";
+    // edgeLeft.style.marginTop = percentage * 100 + 0 + "px";
+    // edgeRight.style.marginTop = percentage * 100 + 0 + "px";
+    background.style.marginTop = percentage * 200 + 0 + "px";
   }
 
   document.addEventListener("scroll", function () {
     window.requestAnimationFrame(scrollHandler);
   });
+
+  window.requestAnimationFrame(scrollHandler);
 });

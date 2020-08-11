@@ -20,16 +20,16 @@ document.addEventListener("DOMContentLoaded", function (e) {
   var background = document.querySelector(".background");
 
   function scrollHandler(params) {
-    var percentage =
-      window.pageYOffset / (edgeLeft.scrollHeight - window.innerHeight);
+    // var percentage =
+    // window.pageYOffset / (edgeLeft.scrollHeight - window.innerHeight);
     // star1.style.top = percentage * 400 + 120 + "px";
     // star2.style.top = percentage * 400 + 80 + "px";
     // star3.style.top = percentage * -100 + 800 + "px";
     // star4.style.top = percentage * 400 + 500 + "px";
     // star5.style.top = percentage * 400 + 400 + "px";
-    // edgeLeft.style.marginTop = percentage * 100 + 0 + "px";
-    // edgeRight.style.marginTop = percentage * 100 + 0 + "px";
-    background.style.marginTop = percentage * 200 + 0 + "px";
+    // edgeLeftDouble.style.marginTop = percentage * 100 + 0 + "px";
+    // edgeRightDouble.style.marginTop = percentage * 100 + 0 + "px";
+    // background.style.marginTop = percentage * 200 + 0 + "px";
   }
 
   document.addEventListener("scroll", function () {
@@ -37,4 +37,14 @@ document.addEventListener("DOMContentLoaded", function (e) {
   });
 
   window.requestAnimationFrame(scrollHandler);
+
+  ctaButton();
 });
+
+function ctaButton() {
+  document.querySelector("#buy-splash").addEventListener("click", function () {
+    document.querySelector("#tt-widget-inline-0").scrollIntoView({
+      behavior: "smooth",
+    });
+  });
+}

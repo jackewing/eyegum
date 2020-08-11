@@ -42,9 +42,9 @@ document.addEventListener("DOMContentLoaded", function (e) {
 });
 
 function ctaButton() {
-  document.querySelector("#buy-splash").addEventListener("click", function () {
-    document.querySelector("#tt-widget-inline-0").scrollIntoView({
-      behavior: "smooth",
-    });
-  });
+  // document.querySelector("#buy-splash").addEventListener("click", function () {
+  //   document.querySelector("#tt-widget-inline-0").scrollIntoView({
+  //     behavior: "smooth",
+  //   });
+  // });
 }

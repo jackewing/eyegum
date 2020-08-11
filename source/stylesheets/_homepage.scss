@@ -1,6 +1,6 @@
 .background {
-  background-image: url("/images/backgrounds/W2N_blue_bg.jpg");
-  // background-size: cover;
+  // background-image: url("/images/backgrounds/W2N_blue_bg.jpg");
+  background-size: cover;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -8,6 +8,99 @@
   right: 0;
   z-index: -2;
   height: 100%;
+}
+
+div.splash {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+
+  margin: 0 auto;
+  height: 100vh;
+
+  @include media-breakpoint-down(lg) {
+    max-width: 100%;
+  }
+  @include media-breakpoint-down(sm) {
+    justify-content: flex-start;
+    padding-top: 1rem;
+  }
+
+  .title-container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    @include media-breakpoint-down(lg) {
+      align-items: center;
+    }
+    h1.title {
+      font-family: "Sometimes-Times";
+      font-style: italic;
+      margin: 0 auto;
+      color: #48484a;
+      font-size: 6rem;
+      position: relative;
+      @include media-breakpoint-down(lg) {
+        font-size: 4rem;
+      }
+      @include media-breakpoint-down(md) {
+        font-size: 3rem;
+        text-align: center;
+      }
+    }
+    p {
+      padding: 0.3rem;
+      font-family: "Sometimes-Times";
+      font-size: 1rem;
+      margin: 0;
+      font-style: italic;
+      @include media-breakpoint-down(md) {
+        text-align: center;
+      }
+    }
+  }
+
+  div.cta-container {
+    width: 300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+    button#buy-splash {
+      border: 15px solid white;
+      border-radius: 3px;
+      padding: 1rem 3rem;
+      font-family: "Sometimes-Times";
+      font-size: 30px;
+      background-image: url(/images/backgrounds/W2N_yellow_bg.jpg);
+      box-shadow: 8px 8px 0px #508b90;
+      cursor: pointer;
+      outline: none;
+      transition: margin-left, margin-top, box-shadow;
+      transition-duration: 0.2s;
+      -moz-transition-timing-function: ease-in-out;
+      &:hover {
+        margin-left: -2px;
+        margin-top: -5px;
+        box-shadow: 9px 13px 0px #508b90;
+      }
+      &:focus {
+        margin-left: -2px;
+        margin-top: -5px;
+        box-shadow: 9px 13px 0px #508b90;
+      }
+    }
+  }
+}
+
+.tt-widget {
+  margin: 3rem auto;
+  @include media-breakpoint-down(md) {
+    margin-top: 20px;
+  }
 }
 
 .edges {
@@ -43,6 +136,11 @@
   // }
 }
 
+.tt-widget {
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
 .dark {
   width: 100%;
   height: 80vh;
@@ -57,8 +155,7 @@
 body {
   // background-image: url("/images/backgrounds/W2N_edges_extra-long.png");
   background-size: cover;
-
-  min-height: 1860px;
+  background-image: url("/images/backgrounds/W2N_blue_bg.jpg");
   position: relative;
   margin: 0;
 }
@@ -129,67 +226,6 @@ body {
   width: 100%;
   left: 0;
   bottom: 0;
-}
-
-div.splash {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: flex-start;
-  max-width: 80%;
-  margin: 0 auto;
-
-  h1.title {
-    font-family: "Sometimes-Times";
-    font-style: italic;
-    margin: 0 auto;
-    color: #48484a;
-    font-size: 6rem;
-    position: relative;
-    margin-top: 15rem;
-    @media screen and (max-width: 1050px) {
-      font-size: 4rem;
-    }
-    p {
-      font-family: "Sometimes-Times";
-      position: absolute;
-      font-size: 1rem;
-      top: -2rem;
-      left: 1rem;
-    }
-  }
-
-  div.cta-container {
-    width: 300px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    margin-top: 5rem;
-    button#buy-splash {
-      border: 15px solid white;
-      border-radius: 3px;
-      padding: 1rem 3rem;
-      font-family: "Sometimes-Times";
-      font-size: 30px;
-      background-image: url(/images/backgrounds/W2N_yellow_bg.jpg);
-      box-shadow: 8px 8px 0px #508b90;
-      cursor: pointer;
-      outline: none;
-      transition: margin-left, margin-top, box-shadow;
-      transition-duration: 0.2s;
-      -moz-transition-timing-function: ease-in-out;
-      &:hover {
-        margin-left: -2px;
-        margin-top: -5px;
-        box-shadow: 9px 13px 0px #508b90;
-      }
-      &:focus {
-        margin-left: -2px;
-        margin-top: -5px;
-        box-shadow: 9px 13px 0px #508b90;
-      }
-    }
-  }
 }
 
 .artists {

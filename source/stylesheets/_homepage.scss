@@ -1,3 +1,14 @@
+body {
+  // background-image: url("/images/backgrounds/W2N_edges_extra-long.png");
+  background-size: cover;
+  background-image: url("/images/backgrounds/W2N_blue_bg.jpg");
+  position: relative;
+  margin: 0;
+  @include media-breakpoint-down(sm) {
+    background-size: 100vh;
+  }
+}
+
 .background {
   // background-image: url("/images/backgrounds/W2N_blue_bg.jpg");
   background-size: cover;
@@ -40,6 +51,7 @@ div.splash {
       color: #48484a;
       font-size: 6rem;
       position: relative;
+      padding: 0 1rem;
       @include media-breakpoint-down(lg) {
         font-size: 4rem;
       }
@@ -142,14 +154,6 @@ div.splash {
   background-color: #000;
   z-index: -1;
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 10%, transparent);
-}
-
-body {
-  // background-image: url("/images/backgrounds/W2N_edges_extra-long.png");
-  background-size: cover;
-  background-image: url("/images/backgrounds/W2N_blue_bg.jpg");
-  position: relative;
-  margin: 0;
 }
 
 .edge-right,

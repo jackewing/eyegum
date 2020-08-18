@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
 
   function scrollHandler(params) {
     // var percentage =
-    // window.pageYOffset / (edgeLeft.scrollHeight - window.innerHeight);
+    //   window.pageYOffset / (edgeLeft.scrollHeight - window.innerHeight);
     // star1.style.top = percentage * 400 + 120 + "px";
     // star2.style.top = percentage * 400 + 80 + "px";
     // star3.style.top = percentage * -100 + 800 + "px";
@@ -32,11 +32,11 @@ document.addEventListener("DOMContentLoaded", function (e) {
     // background.style.marginTop = percentage * 200 + 0 + "px";
   }
 
-  document.addEventListener("scroll", function () {
-    window.requestAnimationFrame(scrollHandler);
-  });
+  // document.addEventListener("scroll", function () {
+  //   window.requestAnimationFrame(scrollHandler);
+  // });
 
-  window.requestAnimationFrame(scrollHandler);
+  // window.requestAnimationFrame(scrollHandler);
 
   ctaButton();
 });

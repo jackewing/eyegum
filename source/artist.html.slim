@@ -1,0 +1,8 @@
+.artist-detail
+  .image style=background_image(image_path(artist.image))
+  .content
+    .meta
+      h1 = artist.title
+
+    .body
+      = markdown artist.body

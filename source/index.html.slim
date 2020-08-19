@@ -1,0 +1,45 @@
+---
+title: Eyegum - Welcome to Nowhere
+---
+
+div.background
+
+/ div.overlay
+
+div.splash
+  div.title-container
+    <p>EYEGUM PRESENTS...</p>
+    h1.title
+      | Welcome to Nowhere
+    p
+      | Blah blah
+
+    = partial "partials/shared/ticket-widget"
+
+
+div.artists
+  - data.artists.sort {|a,b| b[1].date <=> a[1].date}.first(3).each do | artist |
+    = partial 'partials/artists/artist', locals: {artist: artist[1]}
+
+div.edge-right
+div.edge-right-double
+div.edge-left
+div.edge-left-double
+div.edge-top
+div.edge-bottom
+
+div.everyone-welcome
+
+div.image-dynamic.people
+div.image-dynamic.flower
+div.image-dynamic.tents
+div.image-dynamic.moon
+div.image-dynamic.lines
+div.image-dynamic.star1
+div.image-dynamic.star2
+div.image-dynamic.star3
+div.image-dynamic.star4
+div.image-dynamic.star5
+
+div.sun
+

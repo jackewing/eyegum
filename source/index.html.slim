@@ -21,13 +21,6 @@ div.artists
   - data.artists.sort {|a,b| b[1].date <=> a[1].date}.first(3).each do | artist |
     = partial 'partials/artists/artist', locals: {artist: artist[1]}
 
-div.edge-right
-div.edge-right-double
-div.edge-left
-div.edge-left-double
-div.edge-top
-div.edge-bottom
-
 div.everyone-welcome
 
 div.image-dynamic.people

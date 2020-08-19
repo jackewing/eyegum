@@ -1,0 +1,49 @@
+.artists-container {
+  h2 {
+  }
+  .artists {
+    width: 70%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+    margin: 0 auto;
+    margin-top: 75vh;
+
+    .artist-panel {
+      a {
+        background-image: url("/images/backgrounds/W2N_yellow_bg.jpg");
+        mask-image: linear-gradient(to bottom, black 75%, transparent);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        text-decoration: none;
+        padding: 1rem;
+        .artist-image {
+          img {
+            width: 100%;
+          }
+        }
+        .artist-content {
+          h3 {
+            font-family: "Sometimes-Times";
+            font-size: 2.5rem;
+            margin: 0;
+            margin-bottom: 2rem;
+            margin-top: 0.3rem;
+            color: $text-grey;
+            @include media-breakpoint-down(sm) {
+              font-size: 1.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

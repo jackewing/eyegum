@@ -16,10 +16,12 @@ div.splash
 
     = partial "partials/shared/ticket-widget"
 
-
-div.artists
-  - data.artists.sort {|a,b| b[1].date <=> a[1].date}.first(3).each do | artist |
-    = partial 'partials/artists/artist', locals: {artist: artist[1]}
+div.artists-container
+  h2
+    | Artists
+  div.artists
+    - data.artists.sort {|a,b| b[1].date <=> a[1].date}.first(3).each do | artist |
+      = partial 'partials/artists/artist', locals: {artist: artist[1]}
 
 div.everyone-welcome
 

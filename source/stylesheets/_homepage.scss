@@ -71,38 +71,6 @@ div.splash {
       }
     }
   }
-
-  div.cta-container {
-    width: 300px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    margin-top: 5rem;
-    button#buy-splash {
-      border: 15px solid white;
-      border-radius: 3px;
-      padding: 1rem 3rem;
-      font-family: "Sometimes-Times";
-      font-size: 30px;
-      background-image: url(/images/backgrounds/W2N_yellow_bg.jpg);
-      box-shadow: 8px 8px 0px #508b90;
-      cursor: pointer;
-      outline: none;
-      transition: margin-left, margin-top, box-shadow;
-      transition-duration: 0.2s;
-      -moz-transition-timing-function: ease-in-out;
-      &:hover {
-        margin-left: -2px;
-        margin-top: -5px;
-        box-shadow: 9px 13px 0px #508b90;
-      }
-      &:focus {
-        margin-left: -2px;
-        margin-top: -5px;
-        box-shadow: 9px 13px 0px #508b90;
-      }
-    }
-  }
 }
 
 .tt-widget {

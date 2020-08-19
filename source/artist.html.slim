@@ -1,5 +1,12 @@
 .artist-detail
-  = image_tag artist.image
-  .content
+  .top
+    = image_tag artist.image
+    .cta-container
+      = link_to "Buy Tickets", "/#tickets", id: "buy-splash"
+      = link_to "Go back", "/", class: "go-back"
+  .bottom
     h1 = artist.title
     .body = markdown artist.body
+    .cta-container
+      = link_to "Buy Tickets", "/#tickets", id: "buy-splash"
+      = link_to "Go back", "/", class: "go-back"

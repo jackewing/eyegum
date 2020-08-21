@@ -6,22 +6,28 @@
   justify-content: flex-start;
   max-width: 1200px;
   margin: 0 auto;
+  @include media-breakpoint-down(sm) {
+    padding: 0 4rem;
+  }
   h2 {
     font-family: "Sometimes-Times";
     font-size: 2.5rem;
     font-style: italic;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    @extend %heading-texture;
   }
   .artists {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-column-gap: 1rem;
     grid-row-gap: 1rem;
     margin: 0 auto;
 
     .artist-panel {
       a {
-        background-image: url("/images/backgrounds/W2N_yellow_bg.jpg");
-        mask-image: linear-gradient(to bottom, black 75%, transparent);
+        background-image: url(/images/backgrounds/W2N_yellow_bg.jpg);
+        @extend %border-texture;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
@@ -31,9 +37,16 @@
         flex-direction: column;
         text-decoration: none;
         padding: 1rem;
+        box-shadow: 8px 8px 0px $drop-blue;
+        position: relative;
+        overflow: hidden;
+
         .artist-image {
+          overflow: hidden;
           img {
+            @extend %border-texture;
             width: 100%;
+            box-sizing: border-box;
           }
         }
         .artist-content {
@@ -42,9 +55,8 @@
             font-style: italic;
             font-size: 2.5rem;
             margin: 0;
-            margin-bottom: 2rem;
             margin-top: 0.3rem;
-            color: $text-grey;
+            @extend %heading-texture;
             @include media-breakpoint-down(sm) {
               font-size: 1.5rem;
             }

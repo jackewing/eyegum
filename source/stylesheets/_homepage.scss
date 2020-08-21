@@ -1,16 +1,14 @@
 body {
   // background-image: url("/images/backgrounds/W2N_edges_extra-long.png");
-  background-size: cover;
-  background-image: url("/images/backgrounds/W2N_blue_bg.jpg");
-  position: relative;
+  background-size: contain;
+  background-image: url("/images/backgrounds/W2N_blue_bg-repeating.jpg");
   margin: 0;
   @include media-breakpoint-down(sm) {
-    background-size: 100vh;
   }
 }
 
 .background {
-  // background-image: url("/images/backgrounds/W2N_blue_bg.jpg");
+  // background-image: url("/images/backgrounds/W2N_blue_bg-repeating.jpg");
   background-size: cover;
   position: absolute;
   top: 0;
@@ -19,58 +17,6 @@ body {
   right: 0;
   z-index: -2;
   height: 100%;
-}
-
-div.splash {
-  margin-top: 5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-
-  @include media-breakpoint-down(lg) {
-    max-width: 100%;
-  }
-  @include media-breakpoint-down(sm) {
-    justify-content: flex-start;
-    padding-top: 1rem;
-  }
-
-  .title-container {
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    @include media-breakpoint-down(lg) {
-      align-items: center;
-    }
-    h1.title {
-      font-family: "Sometimes-Times";
-      font-style: italic;
-      margin: 0 auto;
-      color: $text-grey;
-      font-size: 6rem;
-      position: relative;
-      padding: 0 1rem;
-      @include media-breakpoint-down(lg) {
-        font-size: 4rem;
-      }
-      @include media-breakpoint-down(md) {
-        font-size: 3rem;
-        text-align: center;
-      }
-    }
-    p {
-      padding: 0.3rem;
-      font-family: "Sometimes-Times";
-      font-size: 1rem;
-      margin: 0;
-      font-style: italic;
-      @include media-breakpoint-down(md) {
-        text-align: center;
-      }
-    }
-  }
 }
 
 .tt-widget {
@@ -83,34 +29,6 @@ div.splash {
 .edges {
   width: 100%;
   position: absolute;
-}
-
-.overlay {
-  // background-image: url("/images/backgrounds/seamless-water.jpg");
-  // background-size: 100vw;
-  // position: absolute;
-  // background-repeat-y: no-repeat;
-  // top: 0;
-  // bottom: 0;
-  // left: 0;
-  // right: 0;
-  // height: 100vh;
-  // width: 100vw;
-  // -webkit-mask-image: linear-gradient(to bottom, black, transparent);
-  // mask-image: linear-gradient(to bottom, black, transparent);
-  // pointer-events: none;
-  // z-index: -1;
-  // opacity: 0.4;
-  // width: 200vw;
-  // left: -100vw;
-  // filter: blur(10px);
-  // animation: pan 20s linear infinite;
-  // @keyframes pan {
-  //   100% {
-  //     -webkit-transform: translate(100vw);
-  //     transform: translate(100vw);
-  //   }
-  // }
 }
 
 .dark {
@@ -126,28 +44,30 @@ div.splash {
 
 .edge-right,
 .edge-right-double {
-  background-image: url("/images/backgrounds/W2N_right-edge-repeating@3x.png");
+  background-image: url("/images/backgrounds/right-edge.png");
   height: 1860px;
-  background-size: 200px;
+  background-size: 104px;
   background-repeat-y: repeat;
   background-repeat-x: no-repeat;
   position: absolute;
-  width: 200px;
+  width: 104px;
   right: 0;
-  top: 0;
+  top: 25px;
+  z-index: 15;
 }
 
 .edge-left,
 .edge-left-double {
-  background-image: url("/images/backgrounds/W2N_left-edge-repeating@3x.png");
+  background-image: url(/images/backgrounds/left-edge.png);
   height: 1860px;
-  background-size: 200px;
+  background-size: 104px;
   background-repeat-y: repeat;
   background-repeat-x: no-repeat;
   position: absolute;
-  width: 200px;
+  width: 120px;
   left: 0;
-  top: 0;
+  top: 25px;
+  z-index: 15;
 }
 
 // .edge-right-double {
@@ -159,18 +79,16 @@ div.splash {
 //   filter: brightness(0.8);
 // }
 
-// .edge-left-double {
-//   background-image: url("/images/backgrounds/edge-right.png");
-//   z-index: -1;
-//   width: 250px;
-//   background-size: 250px;
-//   transform: rotateX(180deg) rotateY(180deg);
-//   filter: brightness(0.8);
-// }
+.edge-left-double {
+  background-image: url("/images/backgrounds/left-edge.png");
+  z-index: 14;
+  background-size: 104px;
+  top: -500px;
+  filter: brightness(0.8);
+}
 
 .edge-top {
   background-image: url("/images/backgrounds/edge-top.png");
-  background-image: url(/images/backgrounds/edge-top.png);
   height: 400px;
   background-size: 100%;
   background-repeat: no-repeat;
@@ -200,12 +118,19 @@ div.splash {
   height: 100px;
   position: absolute;
   z-index: -1;
+
+  @include media-breakpoint-down(sm) {
+    width: 70px;
+  }
 }
 
 .moon {
   background-image: url("/images/fills/moon.png");
   right: 20%;
   top: 60px;
+  @include media-breakpoint-down(sm) {
+    right: 10%;
+  }
   animation: bob 4s ease-in-out infinite;
   @keyframes bob {
     0% {
@@ -243,10 +168,17 @@ div.splash {
   background-image: url("/images/fills/tents.png");
   right: 20%;
 }
+
 .star1 {
   background-image: url("/images/fills/star.png");
   left: 25%;
   top: 120px;
+
+  @include media-breakpoint-down(sm) {
+    left: 10%;
+    top: 30px;
+  }
+
   animation: spin 5s linear infinite;
   @keyframes spin {
     100% {
@@ -260,6 +192,13 @@ div.splash {
   left: 50%;
   background-size: 60%;
   top: 80px;
+
+  @include media-breakpoint-down(sm) {
+    left: 40%;
+    background-size: 60%;
+    top: 105px;
+  }
+
   animation: spin 4s linear infinite;
   @keyframes spin {
     100% {
@@ -272,6 +211,7 @@ div.splash {
   background-image: url("/images/fills/star.png");
   right: 10%;
   top: 800px;
+
   background-size: cover;
   width: 500px;
   height: 500px;
@@ -284,9 +224,15 @@ div.splash {
   }
 }
 .star4 {
-  left: 60%;
+  left: 65%;
   background-image: url("/images/fills/star.png");
-  top: 500px;
+  top: 440px;
+
+  @include media-breakpoint-down(sm) {
+    left: 72%;
+    top: 260px;
+  }
+
   animation: spin 4s linear infinite;
   @keyframes spin {
     100% {
@@ -300,6 +246,12 @@ div.splash {
   left: 30%;
   background-image: url("/images/fills/star.png");
   top: 400px;
+
+  @include media-breakpoint-down(sm) {
+    left: 7%;
+    top: 390px;
+  }
+
   animation: spin 4s linear infinite;
   @keyframes spin {
     100% {

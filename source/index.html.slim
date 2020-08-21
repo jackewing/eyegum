@@ -4,34 +4,44 @@ title: Eyegum - Welcome to Nowhere
 
 .background
 
-/ .overlay
+.overlay
+
+.edge-left
+.edge-left-double
+.edge-right
 
 .splash
   .title-container
-    <p>EYEGUM PRESENTS...</p>
+    p
+      | EYEGUM PRESENTS...
     h1.title
       | Welcome to Nowhere
     p
-      | Blah blah
+      | WAITANGI WEEKEND
+    p
+      | SOMEWHERE OUTSIDE OF WHANGANUI
 
   .cta-container
     button#buy-splash
       | Buy Tickets
 
+.images-container
+  .image-dynamic.people
+  .image-dynamic.flower
+  .image-dynamic.tents
+  .image-dynamic.moon
+  .image-dynamic.lines
+
 .artists-container
   h2
     | Artists
   .artists
-    - data.artists.sort {|a,b| b[1].date <=> a[1].date}.first(3).each do | artist |
+    - data.artists.sort {|a,b| b[1].date <=> a[1].date}.each do | artist |
       = partial 'partials/artists/artist', locals: {artist: artist[1]}
 
 .everyone-welcome
 
-.image-dynamic.people
-.image-dynamic.flower
-.image-dynamic.tents
-.image-dynamic.moon
-.image-dynamic.lines
+
 .image-dynamic.star1
 .image-dynamic.star2
 / .image-dynamic.star3

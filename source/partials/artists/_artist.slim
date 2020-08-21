@@ -1,8 +1,10 @@
 //link to artist by converting the title to a slug
 .artist-panel
   = link_to '/artist/' + artist.title.parameterize + '/'
+    .overlay
     .artist-image
       = image_tag artist.image
+
     .artist-content
       h3 = artist.title
 

@@ -11,7 +11,7 @@ main.artist-content {
     max-width: 1000px;
     background-image: url("/images/backgrounds/W2N_yellow_bg.jpg");
     border: 15px solid white;
-    box-shadow: 8px 8px 0px #508b90;
+    box-shadow: 8px 8px 0px $drop-blue;
     @include media-breakpoint-down(sm) {
       height: calc(100vh - 6rem);
     }
@@ -22,12 +22,14 @@ main.artist-content {
       @include media-breakpoint-down(sm) {
         grid-template-columns: 1fr;
       }
-
+      .overlay {
+        background-image: url("/images/backgrounds/W2N_edges.png");
+      }
       img {
         width: 100%;
         margin: 0 auto;
         border: 15px solid white;
-        box-shadow: 8px 8px 0px #508b90;
+        box-shadow: 8px 8px 0px $drop-blue;
         box-sizing: border-box;
       }
       .cta-container {

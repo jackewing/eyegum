@@ -1,0 +1,16 @@
+%heading-texture {
+  background-image: url(/images/border.jpg);
+  background-repeat: repeat;
+  background-position: center center;
+  background-size: 180%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-fill-color: transparent;
+  color: transparent;
+  background-size: 150px;
+}
+
+%border-texture {
+  border: 2px solid;
+  border-image: url(/images/border.jpg) 7% repeat;
+}

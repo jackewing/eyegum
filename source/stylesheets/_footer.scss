@@ -1,18 +1,21 @@
-header.header-primary {
+footer.footer-primary {
   .bg-left,
   .bg-right {
     position: fixed;
     z-index: 16;
     width: 1525px;
-    height: 90px;
+    height: 46px;
     background-size: 1525px;
     background-repeat: no-repeat;
-    background-image: url(/images/backgrounds/top-edge.png);
-    top: -1px;
+    background-image: url(/images/backgrounds/bottom-edge.png);
+    bottom: -1px;
   }
   .bg-left {
     mask-image: linear-gradient(
       90deg,
+      black 40px,
+      transparent 1%,
+      black 1%,
       rgba(0, 0, 0, 1) 56%,
       rgba(0, 212, 255, 0) 68%
     );

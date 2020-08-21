@@ -22,22 +22,29 @@ body {
   }
 }
 
-.edges {
-  width: 100%;
+.overlay-container {
+  overflow: hidden;
   position: absolute;
-}
-
-.dark {
-  width: 100%;
-  height: 80vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #000;
+  width: 100vw;
+  height: 100vh;
   z-index: -1;
-  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 10%, transparent);
+  mask-image: linear-gradient(to bottom, black, transparent);
+  video {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    pointer-events: none;
+    object-fit: cover;
+  }
+  .first {
+    left: -100vw;
+  }
+  .second {
+    left: 0vw;
+  }
 }
-
+.edge-left,
+.edge-left-double,
 .edge-right,
 .edge-right-double {
   background-image: url("/images/backgrounds/right-edge.png");
@@ -55,23 +62,12 @@ body {
 .edge-left,
 .edge-left-double {
   background-image: url(/images/backgrounds/left-edge.png);
-  height: 1860px;
-  background-size: 104px;
-  background-repeat-y: repeat;
-  background-repeat-x: no-repeat;
-  position: absolute;
   width: 120px;
-  left: 0;
   top: 25px;
-  z-index: 15;
+  left: 0;
 }
 
-.edge-right-double {
-  z-index: 14;
-  top: -500px;
-  filter: brightness(0.8);
-}
-
+.edge-right-double,
 .edge-left-double {
   z-index: 14;
   top: -500px;
@@ -87,12 +83,29 @@ body {
   }
 }
 
+.images-container {
+  height: 100vh;
+  position: relative;
+  .people {
+    right: 10%;
+    width: 40%;
+    top: 100px;
+  }
+  .flower {
+    right: 10%;
+    top: -140px;
+    width: 200px;
+  }
+  .tents {
+    left: 10%;
+    width: 40%;
+    top: 500px;
+  }
+}
+
 .image-dynamic {
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
   width: 100px;
-  height: 100px;
+  height: auto;
   position: absolute;
   z-index: -1;
 
@@ -102,7 +115,6 @@ body {
 }
 
 .moon {
-  background-image: url("/images/fills/moon.png");
   right: 20%;
   top: 60px;
   @include media-breakpoint-down(sm) {
@@ -126,28 +138,12 @@ body {
 }
 
 .lines {
-  background-image: url("/images/fills/lines.png");
   left: 10%;
   width: 500px;
-  height: 500px;
-  top: 530px;
-}
-
-.people {
-  background-image: url("/images/fills/people.png");
-  left: 10%;
-}
-.flower {
-  background-image: url("/images/fills/flower.png");
-  left: 20%;
-}
-.tents {
-  background-image: url("/images/fills/tents.png");
-  right: 20%;
+  top: 630px;
 }
 
 .star1 {
-  background-image: url("/images/fills/star.png");
   left: 25%;
   top: 120px;
 
@@ -165,7 +161,6 @@ body {
   }
 }
 .star2 {
-  background-image: url("/images/fills/star.png");
   left: 50%;
   background-size: 60%;
   top: 80px;
@@ -185,7 +180,6 @@ body {
   }
 }
 .star3 {
-  background-image: url("/images/fills/star.png");
   right: 10%;
   top: 800px;
 
@@ -202,7 +196,6 @@ body {
 }
 .star4 {
   left: 65%;
-  background-image: url("/images/fills/star.png");
   top: 440px;
 
   @include media-breakpoint-down(sm) {
@@ -221,7 +214,6 @@ body {
 
 .star5 {
   left: 30%;
-  background-image: url("/images/fills/star.png");
   top: 400px;
 
   @include media-breakpoint-down(sm) {

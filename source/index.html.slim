@@ -1,13 +1,18 @@
 ---
 title: Eyegum - Welcome to Nowhere
 ---
-
-.overlay
+.overlay-container
+  <video data-object-fit="" poster="" disableremoteplayback="" playsinline="" autoplay="" muted="" loop="">
+      <source src="/images/backgrounds/seamless-water2.mp4" type="video/mp4">
+  </video>
+  / = image_tag  "/images/backgrounds/seamless-water.jpg", class: "overlay first"
+  / = image_tag  "/images/backgrounds/seamless-water.jpg", class: "overlay second"
 
 .edge-left
-.edge-left-double
+/ .edge-left-double
 .edge-right
-.edge-right-double
+/ .edge-right-double
+
 
 .splash
   .title-container
@@ -24,12 +29,20 @@ title: Eyegum - Welcome to Nowhere
     button#buy-splash
       | Buy Tickets
 
+= image_tag "/images/fills/moon.png", class: "image-dynamic moon"
+= image_tag "/images/fills/star.png", class: "image-dynamic star1"
+= image_tag "/images/fills/star.png", class: "image-dynamic star2"
+= image_tag "/image/fills/star.png", class: "image-dynamic star3"
+= image_tag "/images/fills/star.png", class: "image-dynamic star4"
+= image_tag "/images/fills/star.png", class: "image-dynamic star5"
+= image_tag "/images/fills/lines.png", class: "image-dynamic lines"
+
 .images-container
-  .image-dynamic.people
-  .image-dynamic.flower
-  .image-dynamic.tents
-  .image-dynamic.moon
-  .image-dynamic.lines
+  = image_tag "/images/fills/people.png", class: "image-dynamic people"
+  = image_tag "/images/fills/flower.png", class: "image-dynamic flower"
+  = image_tag "/images/fills/tents.png", class: "image-dynamic tents"
+
+
 
 .artists-container
   h2
@@ -39,14 +52,6 @@ title: Eyegum - Welcome to Nowhere
       = partial 'partials/artists/artist', locals: {artist: artist[1]}
 
 .everyone-welcome
-
-
-.image-dynamic.star1
-.image-dynamic.star2
-/ .image-dynamic.star3
-.image-dynamic.star4
-.image-dynamic.star5
-
 .sun
 
 = partial "partials/shared/ticket-widget"

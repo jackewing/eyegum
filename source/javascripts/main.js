@@ -20,19 +20,20 @@ var edgeRightDouble = document.querySelector(".edge-right-double");
 var background = document.querySelector(".background");
 
 function scrollHandler(params) {
-  var percentage = (
-    window.pageYOffset /
-    (edgeLeft.scrollHeight - window.innerHeight)
-  ).toFixed(5);
+  var percentage =
+    window.pageYOffset / (edgeLeft.scrollHeight - window.innerHeight);
 
-  star1.style.top = percentage * 400 + 120 + "px";
-  star2.style.top = percentage * 400 + 80 + "px";
-  // star3.style.top = percentage * -100 + 800 + "px";
-  star4.style.top = percentage * 400 + 500 + "px";
-  star5.style.top = percentage * 400 + 400 + "px";
-  edgeLeftDouble.style.marginTop = percentage * 100 + 0 + "px";
+  // star1.style.top = percentage * 200 + 120 + "px";
+  // star2.style.top = percentage * 200 + 80 + "px";
+  // // star3.style.top = percentage * -100 + 800 + "px";
+  // star4.style.top = percentage * 200 + 500 + "px";
+  // star5.style.top = percentage * 200 + 400 + "px";
 
-  edgeRightDouble.style.marginTop = percentage * 100 + 0 + "px";
+  tents.style.transform = "translateY(" + percentage * 100 + 0 + "px)";
+
+  people.style.transform = "translateY(" + percentage * 50 + 0 + "px)";
+  // edgeLeftDouble.style.marginTop = percentage * 100 + 0 + "px";
+  // edgeRightDouble.style.marginTop = percentage * 100 + 0 + "px";
   // background.style.marginTop = percentage * 200 + 0 + "px";
 }
 

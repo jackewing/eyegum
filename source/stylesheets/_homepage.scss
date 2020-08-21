@@ -1,15 +1,10 @@
 body {
-  // background-image: url("/images/backgrounds/W2N_edges_extra-long.png");
-  background-size: cover;
-  background-image: url("/images/backgrounds/W2N_blue_bg-repeating.jpg");
+  position: relative;
   margin: 0;
-  @include media-breakpoint-down(sm) {
-    background-size: contain;
-  }
 }
 
 .background {
-  // background-image: url("/images/backgrounds/W2N_blue_bg-repeating.jpg");
+  background-image: url("/images/backgrounds/W2N_blue_bg-repeating.jpg");
   background-size: cover;
   position: absolute;
   top: 0;
@@ -71,6 +66,18 @@ body {
   z-index: 15;
 }
 
+.edge-right-double {
+  z-index: 14;
+  top: -500px;
+  filter: brightness(0.8);
+}
+
+.edge-left-double {
+  z-index: 14;
+  top: -500px;
+  filter: brightness(0.8);
+}
+
 .edge-left,
 .edge-left-double,
 .edge-right,
@@ -78,46 +85,6 @@ body {
   @include media-breakpoint-down(sm) {
     display: none;
   }
-}
-
-// .edge-right-double {
-//   background-image: url("/images/backgrounds/edge-left.png");
-//   z-index: -1;
-//   width: 250px;
-//   background-size: 250px;
-//   transform: rotateX(180deg) rotateY(180deg);
-//   filter: brightness(0.8);
-// }
-
-.edge-left-double {
-  background-image: url("/images/backgrounds/left-edge.png");
-  z-index: 14;
-  background-size: 104px;
-  top: -500px;
-  filter: brightness(0.8);
-}
-
-.edge-top {
-  background-image: url("/images/backgrounds/edge-top.png");
-  height: 400px;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  position: absolute;
-  width: 118%;
-  left: -105px;
-  top: -60px;
-  z-index: -1;
-}
-
-.edge-bottom {
-  // background-image: url("/images/backgrounds/edge-bottom.png");
-  height: 1860px;
-  background-size: 200px;
-  background-repeat: no-repeat;
-  position: absolute;
-  width: 100%;
-  left: 0;
-  bottom: 0;
 }
 
 .image-dynamic {

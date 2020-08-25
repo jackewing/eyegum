@@ -70,6 +70,9 @@ div.splash {
   padding-top: 114px;
   transition: opacity 0.5s ease-in-out;
   pointer-events: none;
+  @include media-breakpoint-down(sm) {
+    padding-top: 142px;
+  }
   &.clear {
     opacity: 0;
   }

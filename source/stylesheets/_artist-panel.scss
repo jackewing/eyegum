@@ -24,6 +24,9 @@
     text-align: center;
     margin: 0 auto;
     padding: 3em;
+    @include media-breakpoint-down(sm) {
+      padding: 0;
+    }
     @extend %heading-texture;
   }
   .artists {

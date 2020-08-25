@@ -49,9 +49,7 @@ body {
   }
 }
 .edge-left,
-.edge-left-double,
-.edge-right,
-.edge-right-double {
+.edge-right {
   background-image: url("/images/backgrounds/right-edge.png");
   min-height: 100%;
   background-size: 104px;
@@ -64,49 +62,89 @@ body {
   z-index: 15;
 }
 
-.edge-left,
-.edge-left-double {
+.edge-left {
   background-image: url(/images/backgrounds/left-edge.png);
   width: 120px;
   top: 25px;
   left: -1px;
 }
 
-.edge-right-double,
-.edge-left-double {
-  z-index: 14;
-  top: -500px;
-  filter: brightness(0.8);
-}
-
 .edge-left,
-.edge-left-double,
-.edge-right,
-.edge-right-double {
+.edge-right {
   @include media-breakpoint-down(sm) {
     display: none;
   }
 }
 
+.video-container {
+  width: 80%;
+  max-width: 680px;
+  margin: 0 auto;
+  min-height: 400px;
+  position: relative;
+  margin-bottom: 5rem;
+  .embedded-video {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+  }
+}
+
 .images-container {
   position: relative;
+  img {
+    animation: bob 4s ease-in-out infinite;
+    @keyframes bob {
+      0% {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+      }
+      50% {
+        -webkit-transform: translateY(10px);
+        transform: translateY(10px);
+      }
+      100% {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+      }
+    }
+  }
+
   .people {
-    right: 10%;
-    width: 20%;
-    top: 160px;
+    right: 16%;
+    width: 15%;
     min-width: 150px;
+
+    @include media-breakpoint-down(sm) {
+      right: 5%;
+      width: 15%;
+      top: 180px;
+      min-width: 130px;
+    }
   }
   .flower {
-    right: 23%;
-    top: 630px;
-    width: 20%;
+    right: calc(50% - 75px);
     min-width: 150px;
+    top: 300px;
+    animation-delay: 300ms;
+    @include media-breakpoint-down(sm) {
+      right: calc(50% - 75px);
+      min-width: 120px;
+      top: 170px;
+    }
   }
   .tents {
     left: 15%;
-    width: 25%;
-    top: 400px;
+    width: 15%;
     min-width: 150px;
+    animation-delay: 600ms;
+    @include media-breakpoint-down(sm) {
+      left: 5%;
+      width: 15%;
+      top: 180px;
+      min-width: 130px;
+    }
   }
 }
 

@@ -51,7 +51,7 @@ div.splash {
         }
       }
       &:last-of-type {
-        padding: 1.5rem 0;
+        padding: 1.5rem 2rem;
         max-width: none;
       }
       @include media-breakpoint-down(sm) {

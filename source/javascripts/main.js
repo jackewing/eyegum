@@ -1,10 +1,10 @@
-window.onload = function () {
-  document.querySelector(".loading-screen").classList.add("clear");
-  setTimeout(function () {
-    document.querySelector(".loading-screen").classList.add("hide");
-  }, 3000);
-  document.cookie = "welcome_to_nowhere";
-};
+// window.onload = function () {
+//   document.querySelector(".loading-screen").classList.add("clear");
+//   setTimeout(function () {
+//     document.querySelector(".loading-screen").classList.add("hide");
+//   }, 3000);
+//   document.cookie = "welcome_to_nowhere";
+// };
 
 var ticketsButton = document.querySelector("#buy-splash");
 

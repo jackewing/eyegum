@@ -4,10 +4,10 @@ title: Eyegum - Welcome to Nowhere
 
 .overlay-container
   <video data-object-fit="" poster="" disableremoteplayback="" playsinline="" autoplay="" muted="" loop="">
-      <source src="/images/backgrounds/seamless-water2.webm" type="video/mp4">
+    <source src="/images/backgrounds/seamless-water2.webm" type="video/mp4">
   </video>
 
-.splash.loading-screen
+/ .splash.loading-screen
   .title-container
     h1.title
       | Welcome to Nowhere
@@ -19,7 +19,7 @@ title: Eyegum - Welcome to Nowhere
     h1.title
       | Welcome to Nowhere
     p
-      | WAITANGI WEEKEND
+      | WAITANGI WEEKEND Feb 6-7, 2021
     p
       | SOMEWHERE OUTSIDE OF WHANGANUI
     p
@@ -28,6 +28,9 @@ title: Eyegum - Welcome to Nowhere
   .cta-container
     button#buy-splash
       | Buy Tickets
+
+.video-container
+  <iframe class="embedded-video" src="https://www.youtube.com/embed/4-HjuYzX3VM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 = image_tag "/images/fills/moon.png", class: "image-dynamic moon"
 = image_tag "/images/fills/star.png", class: "image-dynamic star1"
@@ -43,7 +46,6 @@ title: Eyegum - Welcome to Nowhere
   = image_tag "/images/fills/tents.png", class: "image-dynamic tents"
 
 
-
 .artists-container
   h2
     | Artists
@@ -52,9 +54,6 @@ title: Eyegum - Welcome to Nowhere
 /   .artists
 /     - data.artists.sort {|a,b| b[1].date <=> a[1].date}.each do | artist |
 /       = partial 'partials/artists/artist', locals: {artist: artist[1]}
-
-.everyone-welcome
-.sun
 
 .tickets-anchor
   = partial "partials/shared/ticket-widget"

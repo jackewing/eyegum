@@ -1,12 +1,21 @@
 header.header-primary
   .bg-left
   .bg-right
+  .social-container
+    = link_to "", "https://www.facebook.com/eyegumevents", class: "header-link fb"
+    = link_to "", "https://www.instagram.com/welcometonowhere_/", class: "header-link insta"
   = link_to "ABOUT", "/about", class: "header-link"
   = link_to "FAQs", "/FAQs", class: "header-link"
+  = link_to "CONTACT", "mailto:eyegum.music@gmail.com", class: "header-link"
   = link_to "HOME", "/", class: "header-link"
 
 .mobile-menu
   = link_to "ABOUT", "/about", class: "header-link"
   = link_to "FAQs", "/FAQs", class: "header-link"
+  = link_to "CONTACT", "mailto:eyegum.music@gmail.com", class: "header-link"
   = link_to "HOME", "/", class: "header-link"
+  .social-container
+    = link_to "", "https://www.facebook.com/eyegumevents", class: "header-link fb"
+    = link_to "", "https://www.instagram.com/welcometonowhere_/", class: "header-link insta"
+
   button.menu

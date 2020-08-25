@@ -1,6 +1,7 @@
 ---
 title: Eyegum - Welcome to Nowhere
 ---
+
 .overlay-container
   <video data-object-fit="" poster="" disableremoteplayback="" playsinline="" autoplay="" muted="" loop="">
       <source src="/images/backgrounds/seamless-water2.webm" type="video/mp4">
@@ -8,11 +9,10 @@ title: Eyegum - Welcome to Nowhere
   / = image_tag  "/images/backgrounds/seamless-water.jpg", class: "overlay first"
   / = image_tag  "/images/backgrounds/seamless-water.jpg", class: "overlay second"
 
-.edge-left
-/ .edge-left-double
-.edge-right
-/ .edge-right-double
-
+/ .splash.loading-screen
+  .title-container
+    h1.title
+      | Welcome to Nowhere
 
 .splash
   .title-container
@@ -24,6 +24,8 @@ title: Eyegum - Welcome to Nowhere
       | WAITANGI WEEKEND
     p
       | SOMEWHERE OUTSIDE OF WHANGANUI
+    p
+      | Aotearoa’s coolest little independent music festival.
 
   .cta-container
     button#buy-splash
@@ -32,10 +34,11 @@ title: Eyegum - Welcome to Nowhere
 = image_tag "/images/fills/moon.png", class: "image-dynamic moon"
 = image_tag "/images/fills/star.png", class: "image-dynamic star1"
 = image_tag "/images/fills/star.png", class: "image-dynamic star2"
-= image_tag "/image/fills/star.png", class: "image-dynamic star3"
+/ = image_tag "/image/fills/star.png", class: "image-dynamic star3"
 = image_tag "/images/fills/star.png", class: "image-dynamic star4"
 = image_tag "/images/fills/star.png", class: "image-dynamic star5"
 = image_tag "/images/fills/lines.png", class: "image-dynamic lines"
+= image_tag "/images/fills/everyone-welcome.png", class: "image-dynamic everyone-welcome"
 
 .images-container
   = image_tag "/images/fills/people.png", class: "image-dynamic people"
@@ -47,12 +50,16 @@ title: Eyegum - Welcome to Nowhere
 .artists-container
   h2
     | Artists
-  .artists
-    - data.artists.sort {|a,b| b[1].date <=> a[1].date}.each do | artist |
-      = partial 'partials/artists/artist', locals: {artist: artist[1]}
+  p
+    | Announcing soon...
+/   .artists
+/     - data.artists.sort {|a,b| b[1].date <=> a[1].date}.each do | artist |
+/       = partial 'partials/artists/artist', locals: {artist: artist[1]}
 
 .everyone-welcome
 .sun
 
-= partial "partials/shared/ticket-widget"
+.tickets-anchor
+  = partial "partials/shared/ticket-widget"
 
+= javascript_include_tag 'main', async: true

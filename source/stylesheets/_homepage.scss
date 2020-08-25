@@ -1,10 +1,12 @@
 body {
   position: relative;
   margin: 0;
+  min-height: 1500px;
+  background-image: url("/images/backgrounds/W2N_blue_bg-repeating.jpg");
+  background-size: cover;
 }
 
 .background {
-  background-image: url("/images/backgrounds/W2N_blue_bg-repeating.jpg");
   background-size: cover;
   position: absolute;
   top: 0;
@@ -17,18 +19,21 @@ body {
 
 .tt-widget {
   margin: 3rem auto;
+  padding: 1rem;
   @include media-breakpoint-down(md) {
     margin-top: 20px;
   }
 }
 
 .overlay-container {
-  overflow: hidden;
+  filter: hue-rotate(16deg);
+  mask-image: linear-gradient(to bottom, black, transparent);
+  overflow-x: hidden;
   position: absolute;
   width: 100vw;
   height: 100vh;
+  opacity: 0.5;
   z-index: -1;
-  mask-image: linear-gradient(to bottom, black, transparent);
   pointer-events: none;
   video {
     position: absolute;
@@ -48,14 +53,14 @@ body {
 .edge-right,
 .edge-right-double {
   background-image: url("/images/backgrounds/right-edge.png");
-  height: 1860px;
+  min-height: 100%;
   background-size: 104px;
   background-repeat-y: repeat;
   background-repeat-x: no-repeat;
   position: absolute;
   width: 104px;
   right: 0;
-  top: -55px;
+  top: 0px;
   z-index: 15;
 }
 
@@ -64,7 +69,7 @@ body {
   background-image: url(/images/backgrounds/left-edge.png);
   width: 120px;
   top: 25px;
-  left: 0;
+  left: -1px;
 }
 
 .edge-right-double,
@@ -84,22 +89,21 @@ body {
 }
 
 .images-container {
-  height: 100vh;
   position: relative;
   .people {
     right: 10%;
-    width: 40%;
+    width: 20%;
     top: 100px;
   }
   .flower {
-    right: 10%;
-    top: -140px;
-    width: 200px;
+    right: 23%;
+    top: 630px;
+    width: 20%;
   }
   .tents {
-    left: 10%;
-    width: 40%;
-    top: 500px;
+    left: 15%;
+    width: 25%;
+    top: 400px;
   }
 }
 
@@ -139,8 +143,23 @@ body {
 
 .lines {
   left: 10%;
-  width: 500px;
+  width: 40%;
+  max-width: 400px;
   top: 630px;
+}
+
+.everyone-welcome {
+  right: 10%;
+  width: 40%;
+  max-width: 100px;
+  top: 80vh;
+  animation: spin 40s linear infinite;
+  @keyframes spin {
+    100% {
+      -webkit-transform: rotate(-360deg);
+      transform: rotate(-360deg);
+    }
+  }
 }
 
 .star1 {

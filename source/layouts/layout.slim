@@ -7,9 +7,12 @@ html
 
   body
     = partial 'partials/shared/header-primary'
-    .background
+    .edge-left
+    / .edge-left-double
+    .edge-right
+    / .edge-right-double
     main.main-content
       = yield
     = partial 'partials/shared/footer'
 
-    = javascript_include_tag 'main', async: true
+    = javascript_include_tag 'nav', async: true

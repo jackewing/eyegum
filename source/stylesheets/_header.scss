@@ -1,11 +1,31 @@
 header.header-primary {
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  top: 0;
+  .header-link {
+    padding: 0.5rem;
+    font-family: "Zetkin-Wide";
+    font-size: 20px;
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+    color: #4a4a4a;
+    max-height: 40px;
+    z-index: 100;
+    &:last-of-type {
+      margin-right: 30px;
+    }
+  }
   .bg-left,
   .bg-right {
     position: fixed;
     z-index: 16;
     width: 1525px;
-    height: 90px;
-    background-size: 1525px;
+    height: 120px;
+    background-size: 1525px 120px;
     background-repeat: no-repeat;
     background-image: url(/images/backgrounds/top-edge.png);
     top: -1px;
@@ -43,5 +63,60 @@ header.header-primary {
   }
   @include media-breakpoint-down(sm) {
     display: none;
+  }
+}
+
+.mobile-menu {
+  background-image: url("/images/backgrounds/W2N_yellow_bg.jpg");
+  min-width: 0;
+  transition: all 0.5s ease-in-out;
+  position: fixed;
+  height: 100vh;
+  z-index: 100;
+  left: -150px;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+  &.active {
+    min-width: 100vw;
+    left: 0px;
+  }
+
+  button.menu {
+    display: none;
+    width: 50px;
+    height: 50px;
+    border: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    margin: 0.5rem;
+    outline: none;
+    background-image: url(/images/menu-open.png);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    &.open {
+      background-image: url(/images/menu-close.svg);
+    }
+    @include media-breakpoint-down(sm) {
+      display: block;
+    }
+  }
+  .header-link {
+    padding: 1rem;
+    font-family: "Zetkin-Wide";
+    font-size: 20px;
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+    color: #4a4a4a;
+    max-height: 40px;
+    z-index: 100;
   }
 }

@@ -4,6 +4,7 @@ div.splash {
   flex-direction: column;
   align-items: flex-start;
   padding-bottom: 5rem;
+  min-height: 100vh;
   @include media-breakpoint-down(sm) {
     padding-top: 7rem;
   }
@@ -27,6 +28,7 @@ div.splash {
       max-width: 530px;
       text-align: center;
       line-height: 130px;
+      padding-bottom: 1rem;
       @extend %heading-texture;
       @include media-breakpoint-down(sm) {
         font-size: 4rem;
@@ -42,15 +44,36 @@ div.splash {
       text-align: center;
       color: $text-grey;
       max-width: 320px;
-      &:last-of-type {
+      &:nth-of-type(2) {
         padding: 1.5rem 0;
         @include media-breakpoint-down(sm) {
           padding: 1rem;
         }
       }
+      &:last-of-type {
+        padding: 1.5rem 0;
+        max-width: none;
+      }
       @include media-breakpoint-down(sm) {
         font-size: 16px;
       }
     }
+  }
+}
+
+.splash.loading-screen {
+  background: #fff;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 114px;
+  transition: opacity 0.5s ease-in-out;
+  pointer-events: none;
+  &.clear {
+    opacity: 0;
+  }
+  &.hide {
+    display: none;
   }
 }

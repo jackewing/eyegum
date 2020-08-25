@@ -1,7 +1,12 @@
 header.header-primary
   .bg-left
   .bg-right
+  = link_to "ABOUT", "/about", class: "header-link"
+  = link_to "FAQs", "/FAQs", class: "header-link"
+  = link_to "HOME", "/", class: "header-link"
 
-
-
-
+.mobile-menu
+  = link_to "ABOUT", "/about", class: "header-link"
+  = link_to "FAQs", "/FAQs", class: "header-link"
+  = link_to "HOME", "/", class: "header-link"
+  button.menu

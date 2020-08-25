@@ -1,0 +1,45 @@
+.about,
+.faqs {
+  padding: 3rem 6.5rem 2rem;
+  max-width: 650px;
+  margin: 0 auto;
+  @include media-breakpoint-down(sm) {
+    padding: 2rem;
+  }
+  h2 {
+    font-family: "Sometimes-Times";
+    font-style: italic;
+    margin: 0 auto;
+    font-size: 80px;
+    position: relative;
+    padding: 3rem 0;
+    max-width: 530px;
+    text-align: center;
+    line-height: 130px;
+    padding-bottom: 1rem;
+    @extend %heading-texture;
+    @include media-breakpoint-down(sm) {
+      padding: 1rem 0;
+      line-height: 80px;
+    }
+  }
+  p {
+    font-family: "Zetkin-Wide";
+    color: #4a4a4a;
+  }
+}
+
+.faqs {
+  p:nth-child(even) {
+    font-family: "Zetkin-WideOblique";
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  padding-bottom: 10rem;
+}
+
+.about {
+  p {
+    text-align: center;
+  }
+}

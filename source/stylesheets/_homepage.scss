@@ -93,17 +93,20 @@ body {
   .people {
     right: 10%;
     width: 20%;
-    top: 100px;
+    top: 160px;
+    min-width: 150px;
   }
   .flower {
     right: 23%;
     top: 630px;
     width: 20%;
+    min-width: 150px;
   }
   .tents {
     left: 15%;
     width: 25%;
     top: 400px;
+    min-width: 150px;
   }
 }
 

@@ -6,7 +6,7 @@ div.splash {
   padding-bottom: 5rem;
   min-height: 100vh;
   @include media-breakpoint-down(sm) {
-    padding-top: 7rem;
+    padding-bottom: 0rem;
   }
   .title-container {
     margin: 0 auto;
@@ -31,9 +31,9 @@ div.splash {
       padding-bottom: 1rem;
       @extend %heading-texture;
       @include media-breakpoint-down(sm) {
-        font-size: 4rem;
-        line-height: 5rem;
-        padding: 1rem 0 2rem;
+        font-size: 3rem;
+        line-height: 4rem;
+        padding: 1rem 0 0rem;
       }
     }
     p {
@@ -71,7 +71,7 @@ div.splash {
   transition: opacity 0.5s ease-in-out;
   pointer-events: none;
   @include media-breakpoint-down(sm) {
-    padding-top: 142px;
+    padding-top: 110px;
   }
   &.clear {
     opacity: 0;

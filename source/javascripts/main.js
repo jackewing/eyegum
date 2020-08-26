@@ -9,15 +9,8 @@ window.onload = function () {
 var ticketsButton = document.querySelector("#buy-splash");
 
 ticketsButton.addEventListener("click", function () {
-  document.querySelector(".tickets-anchor").scrollIntoView({
+  document.querySelector(".tickets-scroll").scrollIntoView({
     behavior: "smooth",
-  });
-});
-
-var ticketsButton = document.querySelector("#buy-splash");
-
-ticketsButton.addEventListener("click", function () {
-  document.querySelector(".tickets-anchor").scrollIntoView({
-    behavior: "smooth",
+    block: "end",
   });
 });

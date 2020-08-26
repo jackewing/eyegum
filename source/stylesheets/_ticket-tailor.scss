@@ -1,3 +1,6 @@
 .tickets-anchor {
   padding: 11rem 0 9rem;
+  @include media-breakpoint-down(sm) {
+    padding: 16rem 0 9rem;
+  }
 }

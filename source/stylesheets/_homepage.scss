@@ -83,11 +83,17 @@ body {
   min-height: 400px;
   position: relative;
   margin-bottom: 5rem;
+  @include media-breakpoint-down(sm) {
+    min-height: auto;
+  }
   .embedded-video {
     width: 100%;
     height: 100%;
     display: flex;
     position: absolute;
+    @include media-breakpoint-down(sm) {
+      height: auto;
+    }
   }
 }
 
@@ -118,9 +124,9 @@ body {
 
     @include media-breakpoint-down(sm) {
       right: 5%;
-      width: 15%;
-      top: 180px;
-      min-width: 130px;
+      width: 25%;
+      top: 210px;
+      min-width: auto;
     }
   }
   .flower {
@@ -129,9 +135,10 @@ body {
     top: 300px;
     animation-delay: 300ms;
     @include media-breakpoint-down(sm) {
-      right: calc(50% - 75px);
-      min-width: 120px;
-      top: 170px;
+      right: calc(50% - 50px);
+      width: 25%;
+      top: 200px;
+      min-width: auto;
     }
   }
   .tents {
@@ -141,9 +148,9 @@ body {
     animation-delay: 600ms;
     @include media-breakpoint-down(sm) {
       left: 5%;
-      width: 15%;
-      top: 180px;
-      min-width: 130px;
+      width: 25%;
+      top: 210px;
+      min-width: auto;
     }
   }
 }

@@ -1,0 +1,169 @@
+---
+- object: ticket_type
+  id: tt_1506996
+  access_code: 
+  booking_fee: 0
+  description: 
+  group_id: tg_243733
+  max_per_order: 20
+  min_per_order: 1
+  name: Festival T Shirt (BLUE) (S)
+  price: 3500
+  status: on_sale
+  sort_order: 50100
+  type: GA
+  quantity: 100
+- object: ticket_type
+  id: tt_1507011
+  access_code: 
+  booking_fee: 0
+  description: 
+  group_id: tg_243733
+  max_per_order: 20
+  min_per_order: 1
+  name: Festival T Shirt (BLUE) (M)
+  price: 3500
+  status: on_sale
+  sort_order: 50101
+  type: GA
+  quantity: 100
+- object: ticket_type
+  id: tt_1507012
+  access_code: 
+  booking_fee: 0
+  description: 
+  group_id: tg_243733
+  max_per_order: 20
+  min_per_order: 1
+  name: Festival T Shirt (BLUE) (L)
+  price: 3500
+  status: on_sale
+  sort_order: 50102
+  type: GA
+  quantity: 100
+- object: ticket_type
+  id: tt_1507014
+  access_code: 
+  booking_fee: 0
+  description: 
+  group_id: tg_243733
+  max_per_order: 20
+  min_per_order: 1
+  name: Festival T Shirt (BLUE) (XL)
+  price: 3500
+  status: on_sale
+  sort_order: 50103
+  type: GA
+  quantity: 99
+- object: ticket_type
+  id: tt_1507015
+  access_code: 
+  booking_fee: 0
+  description: 
+  group_id: tg_243733
+  max_per_order: 20
+  min_per_order: 1
+  name: Festival T Shirt (YELLOW) (S)
+  price: 3500
+  status: on_sale
+  sort_order: 50104
+  type: GA
+  quantity: 100
+- object: ticket_type
+  id: tt_1507024
+  access_code: 
+  booking_fee: 0
+  description: 
+  group_id: tg_243733
+  max_per_order: 20
+  min_per_order: 1
+  name: Festival T Shirt (YELLOW) (M)
+  price: 3500
+  status: on_sale
+  sort_order: 50105
+  type: GA
+  quantity: 100
+- object: ticket_type
+  id: tt_1507025
+  access_code: 
+  booking_fee: 0
+  description: 
+  group_id: tg_243733
+  max_per_order: 20
+  min_per_order: 1
+  name: Festival T Shirt (YELLOW) (L)
+  price: 3500
+  status: on_sale
+  sort_order: 50106
+  type: GA
+  quantity: 99
+- object: ticket_type
+  id: tt_1507026
+  access_code: 
+  booking_fee: 0
+  description: 
+  group_id: tg_243733
+  max_per_order: 20
+  min_per_order: 1
+  name: Festival T Shirt (YELLOW) (XL)
+  price: 3500
+  status: on_sale
+  sort_order: 50107
+  type: GA
+  quantity: 100
+- object: ticket_type
+  id: tt_1507036
+  access_code: 
+  booking_fee: 0
+  description: 
+  group_id: tg_243733
+  max_per_order: 20
+  min_per_order: 1
+  name: Eyegum T Shirt (WHITE) (S)
+  price: 3500
+  status: on_sale
+  sort_order: 50108
+  type: GA
+  quantity: 100
+- object: ticket_type
+  id: tt_1507037
+  access_code: 
+  booking_fee: 0
+  description: 
+  group_id: tg_243733
+  max_per_order: 20
+  min_per_order: 1
+  name: Eyegum T Shirt (WHITE) (M)
+  price: 3500
+  status: on_sale
+  sort_order: 50109
+  type: GA
+  quantity: 100
+- object: ticket_type
+  id: tt_1507038
+  access_code: 
+  booking_fee: 0
+  description: 
+  group_id: tg_243733
+  max_per_order: 20
+  min_per_order: 1
+  name: Eyegum T Shirt (WHITE) (L)
+  price: 3500
+  status: on_sale
+  sort_order: 50110
+  type: GA
+  quantity: 99
+- object: ticket_type
+  id: tt_1507040
+  access_code: 
+  booking_fee: 0
+  description: 
+  group_id: tg_243733
+  max_per_order: 20
+  min_per_order: 1
+  name: Eyegum T Shirt (WHITE) (XL)
+  price: 3500
+  status: on_sale
+  sort_order: 50111
+  type: GA
+  quantity: 100

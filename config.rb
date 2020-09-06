@@ -1,5 +1,9 @@
 #Bootstrap is used to style bits of the demo. Remove it from the config, gemfile and stylesheets to stop using bootstrap
 require "uglifier"
+require "uri"
+require "net/http"
+require "json"
+require 'yaml'
 
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
@@ -78,6 +82,39 @@ configure :build do
   activate :gzip
 
   #Use asset hashes to use for caching
-  #activate :asset_hash
+  # activate :asset_hash
 
 end
+
+class GetMerchandise < Middleman::Extension
+
+  def initialize(app, options_hash={}, &block)
+    super
+    get_merchandise
+  end
+
+  def get_merchandise
+    url = URI("https://api.tickettailor.com/v1/events/ev_403413")
+
+    https = Net::HTTP.new(url.host, url.port);
+    https.use_ssl = true
+
+    request = Net::HTTP::Get.new(url)
+    request["Authorization"] = "Basic c2tfMjg1XzMwMjIwX2VlM2JjN2Q4NzAyNWJhMTY5NDM5OTM0MmIzZTlhNWQ0Og=="
+    request["Cookie"] = "__cfduid=d0e16ce62b8514ae7e93e6f4e5d9d10731599098055"
+
+    response = https.request(request)
+
+    tshirts = JSON.parse(response.read_body)["ticket_types"].select { |t| t["name"].downcase.include?("shirt") }
+
+    yamlshirts = YAML.dump(tshirts)
+
+    File.write("./data/merchandise/data.yaml", yamlshirts)
+
+  end
+end
+
+::Middleman::Extensions.register(:get_merchandise, GetMerchandise)
+
+
+activate :get_merchandise

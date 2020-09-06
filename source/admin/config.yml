@@ -17,3 +17,13 @@ collections:
       - { label: Publish Date, name: date, widget: datetime }
       - { label: Image, name: image, widget: image, required: true }
       - { label: Body, name: body, widget: markdown }
+
+  - name: merchandise
+    label: Merchandise
+    folder: data/merchandise/
+    format: yml
+    extension: yml
+    create: true
+    fields:
+      - { label: Name, name: name, widget: string, required: true }
+      - { label: Image, name: image, widget: image, required: true }

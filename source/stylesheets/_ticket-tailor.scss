@@ -1,6 +1,15 @@
 .tickets-anchor {
-  padding: 11rem 0 9rem;
+  h2 {
+    text-align: center;
+    color: #4a4a4a;
+    padding: 1rem;
+    font-family: "Sometimes-Times";
+    font-size: 3.5rem;
+    font-style: italic;
+    margin: 0 auto;
+  }
+  padding: 2rem 0 5rem;
   @include media-breakpoint-down(sm) {
-    padding: 16rem 0 5rem;
+    padding: 2rem 0 5rem;
   }
 }

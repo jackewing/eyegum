@@ -2,15 +2,17 @@
 title: Eyegum - Welcome to Nowhere
 ---
 
-/ .overlay-container
-/   <video data-object-fit="" poster="" disableremoteplayback="" playsinline="" autoplay="" muted="" loop="">
-/     <source src="/images/backgrounds/seamless-water2.webm" type="video/mp4">
-/   </video>
+.overlay-container
+  <video data-object-fit="" poster="" disableremoteplayback="" playsinline="" autoplay="" muted="" loop="">
+    <source src="/images/backgrounds/seamless-water2.webm" type="video/mp4">
+  </video>
 
-/ .splash.loading-screen
-/   .title-container
-/     h1.title
-/       | Welcome to Nowhere
+.splash.loading-screen
+  .title-container
+    h1.title
+      | Welcome to Nowhere
+
+    = image_tag "/images/fills/everyone-welcome.png", class: "image-dynamic everyone-welcome"
 
 .splash
   .title-container
@@ -19,7 +21,7 @@ title: Eyegum - Welcome to Nowhere
     h1.title
       | Welcome to Nowhere
     p
-      | WAITANGI WEEKEND Feb 6-7, 2021
+      | WAITANGI WEEKEND <br/> Feb 6-7, 2021
     p
       | SOMEWHERE OUTSIDE OF WHANGANUI
     p
@@ -29,42 +31,72 @@ title: Eyegum - Welcome to Nowhere
     button#buy-splash
       | Buy Tickets
 
-/ .video-container
-/   <iframe class="embedded-video" src="https://www.youtube.com/embed/4-HjuYzX3VM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+.video-container
+  <iframe class="embedded-video" src="https://www.youtube.com/embed/4-HjuYzX3VM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-/ = image_tag "/images/fills/moon.png", class: "image-dynamic moon"
-/ = image_tag "/images/fills/star.png", class: "image-dynamic star1"
-/ = image_tag "/images/fills/star.png", class: "image-dynamic star2"
-/ = image_tag "/images/fills/star.png", class: "image-dynamic star4"
-/ = image_tag "/images/fills/star.png", class: "image-dynamic star5"
-/ = image_tag "/images/fills/lines.png", class: "image-dynamic lines"
-/ = image_tag "/images/fills/everyone-welcome.png", class: "image-dynamic everyone-welcome"
+= image_tag "/images/fills/moon.png", class: "image-dynamic moon"
+= image_tag "/images/fills/star.png", class: "image-dynamic star1"
+= image_tag "/images/fills/star.png", class: "image-dynamic star2"
+= image_tag "/images/fills/star.png", class: "image-dynamic star4"
+= image_tag "/images/fills/star.png", class: "image-dynamic star5"
+= image_tag "/images/fills/lines.png", class: "image-dynamic lines"
+= image_tag "/images/fills/everyone-welcome.png", class: "image-dynamic everyone-welcome"
 
-/ .images-container
-/   = image_tag "/images/fills/people.png", class: "image-dynamic people"
-/   = image_tag "/images/fills/flower.png", class: "image-dynamic flower"
-/   = image_tag "/images/fills/tents.png", class: "image-dynamic tents"
+.separator
+  div
+  = image_tag "/images/fills/everyone-welcome.png", class: "image-dynamic everyone-welcome"
+  div
 
+.images-container
+  = image_tag "/images/fills/people.png", class: "image-dynamic people"
+  = image_tag "/images/fills/flower.png", class: "image-dynamic flower"
+  = image_tag "/images/fills/tents.png", class: "image-dynamic tents"
 
-/ .artists-container
-/   h2
-/     | Artists
-/   p
-/     | Announcing soon...
+.artists-container
+  h2
+    | Artists
+  p
+    | Announcing soon...
 /   .artists
 /     - data.artists.sort {|a,b| b[1].date <=> a[1].date}.each do | artist |
 /       = partial 'partials/artists/artist', locals: {artist: artist[1]}
 
-.tickets-anchor
-  = partial "partials/shared/ticket-widget"
+.separator
+  div
+  = image_tag "/images/fills/everyone-welcome.png", class: "image-dynamic everyone-welcome"
+  div
 
 .merchandise
-  - data.merchandise.data.each do | tshirt |
-    .shirt-container
-      |
-      = tshirt["name"]
+  h2
+    | Merchandise
+  p
+    | Available in different colours and sizes from tickets menu
 
+  .merch-cta
+    button#buy-merch
+      | Buy Merch
+
+  .image-container
+    div
+      = image_tag "/images/W2N_T-Shirts_Daisy.jpeg"
+      h4
+        | Festival T Shirt (YELLOW)
+    div
+      = image_tag "/images/W2N_T-Shirts_Light-Blue.jpeg"
+      h4
+        | Festival T Shirt (BLUE)
+
+.separator
+  div
+  = image_tag "/images/fills/everyone-welcome.png", class: "image-dynamic everyone-welcome"
+  div
+
+.tickets-anchor
+  h2
+    | Buy Tickets
+
+  = partial "partials/shared/ticket-widget"
 
 .tickets-scroll
 
-/ = javascript_include_tag 'main', async: true
+= javascript_include_tag 'main', async: true

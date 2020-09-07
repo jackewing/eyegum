@@ -1,9 +1,9 @@
-div.cta-container {
+%button-container {
   width: 300px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
-  #buy-splash {
+  button {
     text-decoration: none;
     background-image: url(/images/backgrounds/W2N_yellow_bg.jpg);
     padding: 1rem 3rem;

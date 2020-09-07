@@ -59,6 +59,9 @@ div.splash {
       }
     }
   }
+  .cta-container {
+    @extend %button-container;
+  }
 }
 
 .splash.loading-screen {
@@ -78,5 +81,11 @@ div.splash {
   }
   &.hide {
     display: none;
+  }
+  img.image-dynamic.everyone-welcome {
+    position: static;
+    margin: 0 auto;
+    padding: 2rem;
+    max-width: 80px;
   }
 }

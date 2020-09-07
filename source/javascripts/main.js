@@ -7,10 +7,19 @@ window.onload = function () {
 };
 
 var ticketsButton = document.querySelector("#buy-splash");
+var merchButton = document.querySelector("#buy-merch");
 
-ticketsButton.addEventListener("click", function () {
-  document.querySelector(".tickets-scroll").scrollIntoView({
-    behavior: "smooth",
-    block: "end",
+[ticketsButton, merchButton].forEach(function (button) {
+  button.addEventListener("click", function () {
+    document.querySelector(".tickets-scroll").scrollIntoView({
+      behavior: "smooth",
+      block: "end",
+    });
+  });
+});
+
+document.querySelectorAll(".merchandise img").forEach(function (el) {
+  el.addEventListener("click", function (el) {
+    el.target.parentElement.classList.toggle("lightbox");
   });
 });

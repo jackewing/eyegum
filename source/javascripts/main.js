@@ -23,3 +23,12 @@ document.querySelectorAll(".merchandise img").forEach(function (el) {
     el.target.parentElement.classList.toggle("lightbox");
   });
 });
+
+document.querySelectorAll(".merchandise h4").forEach(function (el) {
+  el.addEventListener("click", function () {
+    document.querySelector(".tickets-scroll").scrollIntoView({
+      behavior: "smooth",
+      block: "end",
+    });
+  });
+});

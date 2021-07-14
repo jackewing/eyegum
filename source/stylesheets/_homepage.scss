@@ -1,4 +1,5 @@
 body {
+  overflow-x: hidden;
   position: relative;
   margin: 0;
   min-height: 1500px;
@@ -30,7 +31,6 @@ body {
   mask-image: linear-gradient(to bottom, black, transparent);
   overflow-x: hidden;
   position: absolute;
-  width: 100vw;
   height: 100vh;
   opacity: 0.5;
   z-index: -1;
@@ -60,20 +60,21 @@ body {
   right: 0;
   top: 0px;
   z-index: 15;
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
 }
 
 .edge-left {
   background-image: url(/images/backgrounds/left-edge.png);
-  width: 104px;
+  width: 161px;
   top: 25px;
-  left: -1px;
+  left: 16px;
 }
 
-.edge-left,
 .edge-right {
-  @include media-breakpoint-down(sm) {
-    display: none;
-  }
+  right: -15px;
+  top: 0;
 }
 
 .video-container {
